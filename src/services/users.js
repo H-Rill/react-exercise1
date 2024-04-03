@@ -30,4 +30,6 @@ export function updateUser(id, userInfo) {
 function addUser(userInfo) {
   // add user (userInfo is an object which can optionally contain properties of a user)
   // use generateId function and pass users array as the argument to generate a unique id.
+  const userId = generateId(users);
+  users.push({ ...userInfo,  id: userId });
 }

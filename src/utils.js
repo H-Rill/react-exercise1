@@ -1,3 +1,4 @@
 export function generateId(collection = []) {
-  return collection.length * 1000 + 1;
+  const lastId = collection.length > 0 ? Math.max(...collection.map(item => item.id)) : 0;
+  return lastId +1
 }
